@@ -1,0 +1,39 @@
+.homecontent
+{
+        position: absolute;
+        top: 50%;
+        left: 40%;
+        transform: translate(-50%,-50%);
+}
+
+.homecontent h1
+{
+    color:  #3f51b5;
+    font-size: 40px;
+}
+
+.homecontent a
+{
+    margin-top: 10px;
+}
+
+@media screen and (max-width:600px)
+{
+    .home img
+{
+    height: 700px;
+}
+    .homecontent h1
+{
+    font-size: 40px;        
+}
+}
+
+.example-sidenav-content:first-child {
+    margin: 10px 5px 5px 5px;
+  }
+
+  .example-card {
+    max-width: 320px;
+    margin: 66px -650px 19px -44px;
+  }

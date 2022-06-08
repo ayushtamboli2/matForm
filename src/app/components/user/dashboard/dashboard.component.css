@@ -1,0 +1,28 @@
+.main-div mat-card{
+    padding: 0px;
+    }
+    
+    .searchbar{
+      padding: 5px;
+    }
+
+    .suggestList{
+        padding: 20px;
+    }
+
+    .AuthorList{
+        padding: 20px;
+    }
+    table {
+        width: 100%;
+      }
+
+      .search-container{
+        margin-top: 0px;
+        display: flex;
+        justify-content: space-between;
+        margin-right: 5px;
+    }
+    
+
+    

@@ -1,0 +1,35 @@
+<div fxLayoutAlign="center center" fxFlexFill class="main-div">
+
+    <mat-card fxFlex="35">
+        <mat-toolbar fxLayoutAlign="center center" color="primary">Register Here!!</mat-toolbar>
+        <!-- Form -->
+        <form fxLayoutAlign="stretch" fxLayout="column" class="register-form" (ngSubmit)="onRegister()"
+            [formGroup]="registerForm">
+            <mat-form-field>
+                <input matInput placeholder="Enter Full Name" formControlName="full_name">
+                <mat-error *ngIf="!registerForm.controls['full_name'].valid">Full Name is required</mat-error>
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+                <input matInput placeholder="Enter valid email" formControlName="email">
+                <mat-error *ngIf="!registerForm.controls['email'].valid">Email is required</mat-error>
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+                <input formControlName="password" matInput [type]=" hide ? 'password' : 'text'" required
+                    placeholder="Password">
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide Password'"
+                    [attr.aria-pressed]="hide">
+                    <mat-icon>
+                        {{hide ? 'visibility' : 'visibility_off'}}
+                    </mat-icon>
+                </button>
+
+                <mat-error *ngIf="!registerForm.controls['password'].valid">Password is required</mat-error>
+            </mat-form-field>
+            <br>
+            <button mat-raised-button type="submit" color="primary">Register</button>
+
+        </form>
+    </mat-card>
+</div>
